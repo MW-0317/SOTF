@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://cagj64jn35d4q"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_owfon"]
+
+[node name="UI" type="Node2D"]
+script = ExtResource("1_owfon")
+
+[node name="Function Palette" type="Node2D" parent="."]
+
+[node name="FP BG" type="Panel" parent="Function Palette"]
+offset_left = 12.0
+offset_top = 65.0
+offset_right = 269.0
+offset_bottom = 506.0
+
+[node name="FP Text" type="Label" parent="Function Palette/FP BG"]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 131.0
+offset_bottom = 25.0
+text = "Function Palette"
+
+[node name="Add function + button" type="Button" parent="Function Palette/FP BG"]
+offset_left = 95.0
+offset_top = 47.0
+offset_right = 130.0
+offset_bottom = 82.0
+tooltip_text = "Click to add a function"
+text = "+"
+
+[node name="Graph" type="Node2D" parent="."]
+
+[node name="Graph BG" type="Panel" parent="Graph"]
+offset_left = 296.0
+offset_top = 64.0
+offset_right = 1142.0
+offset_bottom = 505.0
+
+[node name="Graph Text" type="Label" parent="Graph/Graph BG"]
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 96.0
+offset_bottom = 28.0
+text = "Graph View"
+
+[node name="Timeline" type="Node2D" parent="."]
+
+[node name="Timeline BG" type="Panel" parent="Timeline"]
+offset_left = 9.0
+offset_top = 513.0
+offset_right = 1145.0
+offset_bottom = 640.0
+
+[node name="Timeline Text" type="Label" parent="Timeline/Timeline BG"]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 75.0
+offset_bottom = 27.0
+text = "Timeline"
+
+[node name="Toolbar" type="Node2D" parent="."]
+
+[node name="Toolbar BG" type="Panel" parent="Toolbar"]
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 53.0
+
+[node name="Toolbar Text" type="Label" parent="Toolbar/Toolbar BG"]
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 87.0
+offset_bottom = 36.0
+text = "Toolbar"
+
+[node name="Exit Button" type="Button" parent="."]
+offset_left = 1117.0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 37.0
+text = "x"
+
+[connection signal="pressed" from="Function Palette/FP BG/Add function + button" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Exit Button" to="." method="_on_exit_button_pressed"]

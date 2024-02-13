@@ -77,59 +77,59 @@ offset_right = 87.0
 offset_bottom = 36.0
 text = "Toolbar"
 
-[node name="Save" type="Button" parent="Toolbar"]
+[node name="Save" type="Button" parent="Toolbar/Toolbar BG"]
 offset_left = 140.0
-offset_top = 8.0
+offset_top = 7.0
 offset_right = 184.0
-offset_bottom = 43.0
+offset_bottom = 42.0
 tooltip_text = "Save progress"
 text = "Save"
 
-[node name="Load" type="Button" parent="Toolbar"]
+[node name="Load" type="Button" parent="Toolbar/Toolbar BG"]
 offset_left = 197.0
-offset_top = 8.0
+offset_top = 7.0
 offset_right = 243.0
-offset_bottom = 43.0
+offset_bottom = 42.0
 tooltip_text = "Load a previous state"
 text = "Load"
 
-[node name="Undo" type="Button" parent="Toolbar"]
+[node name="Undo" type="Button" parent="Toolbar/Toolbar BG"]
 offset_left = 255.0
-offset_top = 8.0
-offset_right = 301.0
-offset_bottom = 43.0
+offset_top = 7.0
+offset_right = 305.0
+offset_bottom = 42.0
 tooltip_text = "Undo (CTRL + Z)"
 text = "Undo"
 
-[node name="Redo" type="Button" parent="Toolbar"]
+[node name="Redo" type="Button" parent="Toolbar/Toolbar BG"]
 offset_left = 316.0
-offset_top = 8.0
+offset_top = 7.0
 offset_right = 364.0
-offset_bottom = 43.0
+offset_bottom = 42.0
 tooltip_text = "Redo your most recent \"undo\" (CTRL + Y)"
 text = "Redo"
 
-[node name="Begin" type="Button" parent="Toolbar"]
+[node name="Begin" type="Button" parent="Toolbar/Toolbar BG"]
 offset_left = 472.0
-offset_top = 9.0
+offset_top = 8.0
 offset_right = 513.0
-offset_bottom = 44.0
+offset_bottom = 43.0
 tooltip_text = "Rewind to the beginning"
 text = "<<"
 
-[node name="Play" type="Button" parent="Toolbar"]
+[node name="Play" type="Button" parent="Toolbar/Toolbar BG"]
 offset_left = 530.0
-offset_top = 9.0
+offset_top = 8.0
 offset_right = 571.0
-offset_bottom = 44.0
+offset_bottom = 43.0
 tooltip_text = "Play"
 text = "play"
 
-[node name="End" type="Button" parent="Toolbar"]
+[node name="End" type="Button" parent="Toolbar/Toolbar BG"]
 offset_left = 592.0
-offset_top = 9.0
+offset_top = 8.0
 offset_right = 633.0
-offset_bottom = 44.0
+offset_bottom = 43.0
 tooltip_text = "Fast forward to the end"
 text = ">>"
 
@@ -138,14 +138,15 @@ offset_left = 1117.0
 offset_top = 2.0
 offset_right = 1152.0
 offset_bottom = 37.0
+tooltip_text = "Exit Application"
 text = "x"
 
 [connection signal="pressed" from="Function Palette/FP BG/Add function + button" to="." method="_on_add_function__button_pressed"]
-[connection signal="pressed" from="Toolbar/Save" to="." method="_on_add_function__button_pressed"]
-[connection signal="pressed" from="Toolbar/Load" to="." method="_on_add_function__button_pressed"]
-[connection signal="pressed" from="Toolbar/Undo" to="." method="_on_add_function__button_pressed"]
-[connection signal="pressed" from="Toolbar/Redo" to="." method="_on_add_function__button_pressed"]
-[connection signal="pressed" from="Toolbar/Begin" to="." method="_on_add_function__button_pressed"]
-[connection signal="pressed" from="Toolbar/Play" to="." method="_on_add_function__button_pressed"]
-[connection signal="pressed" from="Toolbar/End" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Toolbar/Toolbar BG/Save" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Toolbar/Toolbar BG/Load" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Toolbar/Toolbar BG/Undo" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Toolbar/Toolbar BG/Redo" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Toolbar/Toolbar BG/Begin" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Toolbar/Toolbar BG/Play" to="." method="_on_add_function__button_pressed"]
+[connection signal="pressed" from="Toolbar/Toolbar BG/End" to="." method="_on_add_function__button_pressed"]
 [connection signal="pressed" from="Exit Button" to="." method="_on_exit_button_pressed"]
